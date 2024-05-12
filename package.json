@@ -1,0 +1,19 @@
+{
+  "name": "devlinks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --no-source-map --watch sass:static/css/external",
+    "sass:build": "sass --no-source-map sass:static/css/external"
+  },
+  "keywords": [],
+  "author": "Sandip Sadhukhan",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.77.1"
+  }
+}

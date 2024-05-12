@@ -1,6 +1,4 @@
 Tasks List:
-- setup bootstrap variables (Don't go deeper, just setup basic colors and if any customization needed)
-- setup fontawesome and fonts and htmx and any other library if needed.
 - build the database design for authentication and the whole feature.
 - setup authentication routes using the design files
 - build the dashboard ui and rest of the features.

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.png' %}"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/external/bootstrap.css' %}" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/external/bootstrap.min.js' %}"></script>
+    <!-- HTMX -->
+    <script src="{% static 'js/external/htmx.min.js' %}"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

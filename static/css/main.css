@@ -1,0 +1,16 @@
+@font-face {
+  font-family: instrumentSans;
+  src: url(../fonts/InstrumentSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: instrumentSans;
+  src: url(../fonts/InstrumentSans-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: instrumentSans;
+  src: url(../fonts/InstrumentSans-SemiBold.ttf);
+  font-weight: 500;
+}
