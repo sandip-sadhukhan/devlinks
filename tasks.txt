@@ -1,5 +1,4 @@
 Tasks List:
-- build the database design for authentication and the whole feature.
 - setup authentication routes using the design files
 - build the dashboard ui and rest of the features.
 - for live update on left preview, first try with htmx, then can use alpineJS if needed.

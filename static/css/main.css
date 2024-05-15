@@ -14,3 +14,12 @@
   src: url(../fonts/InstrumentSans-SemiBold.ttf);
   font-weight: 500;
 }
+
+/* Login */
+.login-section {
+  min-height: 100vh;
+}
+
+.login-body {
+  margin-top: 120px;
+}
