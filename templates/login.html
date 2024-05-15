@@ -14,27 +14,7 @@
 
                 <div class="card my-5 border-0 rounded-3 shadow-sm px-3 py-4">
                     <div class="card-body">
-                        <form>
-                            <h2>Login</h2>
-                            <p class="text-muted fs-6">Add your details below to get back into the app</p>
-
-                            <div class="my-4">
-                                <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="e.g. alex@email.com">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="form-label">Password</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your password">
-                            </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Login</button>
-                            </div>
-
-                            <div class="mt-4 text-muted text-center">
-                                <p>Don't have an account? <a href="#" class="text-decoration-none">Create account</a></p>
-                            </div>
-                        </form>
+                        {% include 'forms/login-form.html' %}
                     </div>
                 </div>
             </div>
