@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Signup your account | DevLinks{% endblock %}
+
+{% block content %}
+<section class="login-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-8 mx-auto login-body">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'images/logo-devlinks-large.svg' %}" alt="Logo" class="img-fluid">
+                </div>
+
+                <div class="card my-5 border-0 rounded-3 shadow-sm px-3 py-4">
+                    <div class="card-body">
+                        {% include 'forms/signup-form.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
