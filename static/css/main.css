@@ -17,11 +17,12 @@
 }
 
 /* Login */
-.login-section {
+.authentication-section {
   min-height: 100vh;
+  background-color: var(--bs-light);
 }
 
-.login-body {
+.authentication-body {
   margin-top: 120px;
 }
 
@@ -49,4 +50,24 @@
   width: max-content;
   color: var(--bs-danger);
   font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .authentication-section {
+    background-color: var(--bs-white);
+  }
+  .authentication-section .authentication-body {
+    margin-top: 0;
+    padding-top: 38px;
+  }
+  .authentication-section .authentication-body .logo-wrapper {
+    justify-content: start !important;
+    margin-left: 27px;
+  }
+  .authentication-section .authentication-body .authentication-card {
+    box-shadow: none !important;
+  }
+  .authentication-section .authentication-body .authentication-card .logo-mobile {
+    margin-bottom: 64px;
+  }
 }

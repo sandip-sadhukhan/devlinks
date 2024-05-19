@@ -4,15 +4,15 @@
 {% block title %}Login your account | DevLinks{% endblock %}
 
 {% block content %}
-<section class="login-section bg-light">
-    <div class="container">
+<section class="authentication-section">
+    <div class="container-md">
         <div class="row">
-            <div class="col-lg-5 col-md-8 mx-auto login-body">
-                <div class="d-flex justify-content-center">
+            <div class="col-lg-5 col-md-8 mx-auto authentication-body">
+                <div class="d-flex justify-content-center logo-wrapper">
                     <img src="{% static 'images/logo-devlinks-large.svg' %}" alt="Logo" class="img-fluid">
                 </div>
 
-                <div class="card my-5 border-0 rounded-3 shadow-sm px-3 pt-4 pb-3">
+                <div class="card my-md-5 border-0 rounded-3 shadow-sm px-3 pt-4 pb-3 authentication-card">
                     <div class="card-body">
                         {% include 'forms/login-form.html' %}
                     </div>

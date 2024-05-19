@@ -7,7 +7,7 @@
     <p class="text-muted fs-6">Let's get you started sharing your links!</p>
 
     <div class="my-4">
-        <label for="email" class="form-label text-xs{% if loginForm.email.errors %} text-danger{% endif %}">Email address</label>
+        <label for="email" class="form-label text-xs{% if signupForm.email.errors %} text-danger{% endif %}">Email address</label>
         <div class="input-group has-validation with-prepend-img">
             <span class="input-prepend-img"><img src="{% static 'images/icon-email.svg' %}" alt="email"></span>
             <input type="email" class="form-control{% if signupForm.email.errors %} border-danger{% endif %}" id="email" name="email" placeholder="e.g. alex@email.com" value="{{ signupForm.data.email }}">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="mb-4">
-        <label for="password1" class="form-label text-xs{% if loginForm.password1.errors %} text-danger{% endif %}">Create Password</label>
+        <label for="password1" class="form-label text-xs{% if signupForm.password1.errors %} text-danger{% endif %}">Create Password</label>
 
         <div class="input-group has-validation with-prepend-img">
             <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="password"></span>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="mb-4">
-        <label for="password2" class="form-label text-xs{% if loginForm.password2.errors %} text-danger{% endif %}">Confirm Password</label>
+        <label for="password2" class="form-label text-xs{% if signupForm.password2.errors %} text-danger{% endif %}">Confirm Password</label>
 
         <div class="input-group has-validation with-prepend-img">
             <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="password"></span>
