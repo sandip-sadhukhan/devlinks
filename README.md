@@ -7,3 +7,5 @@
 1. Run `python manage.py migrate`
 1. Run `python manage.py runserver`
 1. Open http://localhost:8000 in your browser.
+
+NOTE: By default this will use sqlite3 database, but you can modify `.env` file to use mysql.
