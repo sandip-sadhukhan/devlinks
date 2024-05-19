@@ -52,6 +52,22 @@
   font-size: 12px;
 }
 
+.dashboard {
+  min-height: 100vh;
+}
+.dashboard .nav-section {
+  border-radius: 12px;
+}
+.dashboard .nav-section .header-links .btn:hover,
+.dashboard .nav-section .header-links .btn-active {
+  background-color: #efebff;
+  color: var(--bs-primary) !important;
+}
+.dashboard .nav-section .header-links .btn:hover path,
+.dashboard .nav-section .header-links .btn-active path {
+  fill: var(--bs-primary) !important;
+}
+
 @media (max-width: 767px) {
   .authentication-section {
     background-color: var(--bs-white);

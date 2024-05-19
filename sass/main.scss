@@ -61,6 +61,27 @@
   }
 }
 
+// Dashboard
+.dashboard {
+  min-height: 100vh;
+
+  .nav-section {
+    border-radius: 12px;
+
+    .header-links {
+      .btn:hover,
+      .btn-active {
+        background-color: #efebff;
+        color: var(--bs-primary) !important;
+
+        path {
+          fill: var(--bs-primary) !important;
+        }
+      }
+    }
+  }
+}
+
 // mobile screen
 @media (max-width: 767px) {
   .authentication-section {
