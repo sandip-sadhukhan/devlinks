@@ -1,8 +1,10 @@
+import random
 from django.db import models
 from django.contrib.auth.models import AbstractUser, UserManager as BaseUserManager
 from django.utils.translation import gettext_lazy as _
 from django.apps import apps
 from django.contrib.auth.hashers import make_password
+import string
 
 
 class UserManager(BaseUserManager):
@@ -38,3 +40,17 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ["username"]
 
     objects = UserManager()
+
+    @staticmethod
+    def generate_username(email):
+        initial_username = email.split("@")[0]
+
+        username = initial_username
+
+        while True:
+            if not User.objects.filter(username=username).exists():
+                break
+                
+            username = initial_username + "-" + "".join(random.choices(string.ascii_lowercase + string.digits, k=4))
+
+        return username

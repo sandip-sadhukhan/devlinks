@@ -1,3 +1,5 @@
+{% load static %}
+
 <form hx-post="{% url 'signup' %}" hx-swap="outerHTML">
     {% csrf_token %}
 
@@ -5,41 +7,43 @@
     <p class="text-muted fs-6">Let's get you started sharing your links!</p>
 
     <div class="my-4">
-        <label for="email" class="form-label">Email address</label>
-        <div class="input-group has-validation">
-            <input type="email" class="form-control{% if signupForm.email.errors %} is-invalid{% endif %}" id="email" name="email" placeholder="e.g. alex@email.com" value="{{ signupForm.data.email }}" required>
+        <label for="email" class="form-label text-xs{% if loginForm.email.errors %} text-danger{% endif %}">Email address</label>
+        <div class="input-group has-validation with-prepend-img">
+            <span class="input-prepend-img"><img src="{% static 'images/icon-email.svg' %}" alt="email"></span>
+            <input type="email" class="form-control{% if signupForm.email.errors %} border-danger{% endif %}" id="email" name="email" placeholder="e.g. alex@email.com" value="{{ signupForm.data.email }}">
 
             {% if signupForm.email.errors %}
-                <div class="invalid-feedback">{{ signupForm.email.errors.0 }}</div>
+                <div class="error-msg">{{ signupForm.email.errors.0 }}</div>
             {% endif %}
         </div>
     </div>
 
     <div class="mb-4">
-        <label for="password1" class="form-label">Create Password</label>
+        <label for="password1" class="form-label text-xs{% if loginForm.password1.errors %} text-danger{% endif %}">Create Password</label>
 
-        <div class="input-group has-validation">
-            <input type="password" class="form-control{% if signupForm.password1.errors %} is-invalid{% endif %}" id="password1" name="password1" placeholder="At least 8 characters" minlength="8" required>
+        <div class="input-group has-validation with-prepend-img">
+            <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="password"></span>
+
+            <input type="password" class="form-control{% if signupForm.password1.errors %} border-danger{% endif %}" id="password1" name="password1" placeholder="At least 8 characters" minlength="8">
 
             {% if signupForm.password1.errors %}
-            <div class="invalid-feedback">{{ signupForm.password1.errors.0 }}</div>
+                <div class="error-msg">{{ signupForm.password1.errors.0 }}</div>
             {% endif %}
         </div>
     </div>
 
     <div class="mb-4">
-        <label for="password2" class="form-label">Confirm Password</label>
+        <label for="password2" class="form-label text-xs{% if loginForm.password2.errors %} text-danger{% endif %}">Confirm Password</label>
 
-        <div class="input-group has-validation">
-            <input type="password" class="form-control{% if signupForm.password2.errors %} is-invalid{% endif %}" id="password2" name="password2" placeholder="At least 8 characters" minlength="8" required>
+        <div class="input-group has-validation with-prepend-img">
+            <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="password"></span>
+
+            <input type="password" class="form-control{% if signupForm.password2.errors %} border-danger{% endif %}" id="password2" name="password2" placeholder="At least 8 characters" minlength="8">
 
             {% if signupForm.password2.errors %}
-            <div class="invalid-feedback">{{ signupForm.password2.errors.0 }}</div>
+                <div class="error-msg">{{ signupForm.password2.errors.0 }}</div>
             {% endif %}
-
         </div>
-        
-        <div class="form-text mt-4">Password must contain at least 8 characters</div>
     </div>
 
     <div class="d-grid">

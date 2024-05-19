@@ -21,7 +21,7 @@
         <label for="password" class="form-label text-xs{% if loginForm.password.errors %} text-danger{% endif %}">Password</label>
 
         <div class="input-group has-validation with-prepend-img">
-            <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="email"></span>
+            <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="password"></span>
             <input type="password" class="form-control{% if loginForm.password.errors %} border-danger{% endif %}" id="password" name="password" placeholder="Enter your password">
 
             {% if loginForm.password.errors %}

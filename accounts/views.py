@@ -34,12 +34,19 @@ def signup(request):
 
     if request.method == "POST":
         if form.is_valid():
-            user = User.objects.create_user(email=form.cleaned_data["email"],
-                password=form.cleaned_data["password1"])
-            authLogin(request, user)
-            response = HttpResponse()
-            response["HX-Redirect"] = reverse("dashboard")
-            return response
+            email = form.cleaned_data["email"]
+            password = form.cleaned_data["password1"]
+
+            if User.objects.filter(email=email).exists():
+                form.add_error("email", "User already exists")
+            else:
+                username = User.generate_username(email)
+                user = User.objects.create_user(username=username, email=email,
+                                                password=password)
+                authLogin(request, user)
+                response = HttpResponse()
+                response["HX-Redirect"] = reverse("dashboard")
+                return response
         return render(request, "forms/signup-form.html", {"signupForm": form})
 
     return render(request, "signup.html")
