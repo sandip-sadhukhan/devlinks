@@ -2,17 +2,18 @@
   font-family: instrumentSans;
   src: url(../fonts/InstrumentSans-Regular.ttf);
 }
-
 @font-face {
   font-family: instrumentSans;
   src: url(../fonts/InstrumentSans-Bold.ttf);
   font-weight: 700;
 }
-
 @font-face {
   font-family: instrumentSans;
   src: url(../fonts/InstrumentSans-SemiBold.ttf);
   font-weight: 500;
+}
+.text-xs {
+  font-size: 12px;
 }
 
 /* Login */
@@ -22,4 +23,30 @@
 
 .login-body {
   margin-top: 120px;
+}
+
+.with-prepend-img {
+  position: relative;
+}
+.with-prepend-img .input-prepend-img {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-56%);
+  z-index: 10;
+}
+.with-prepend-img input.form-control {
+  padding-left: 50px;
+  border-radius: var(--bs-border-radius) !important;
+}
+.with-prepend-img .error-msg {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-56%);
+  z-index: 10;
+  text-align: right;
+  width: max-content;
+  color: var(--bs-danger);
+  font-size: 12px;
 }

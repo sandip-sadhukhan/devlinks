@@ -1,3 +1,5 @@
+{% load static %}
+
 <form hx-post="{% url 'login' %}" hx-swap="outerHTML">
     {% csrf_token %}
 
@@ -5,23 +7,25 @@
     <p class="text-muted fs-6">Add your details below to get back into the app</p>
 
     <div class="my-4">
-        <label for="email" class="form-label">Email address</label>
-        <div class="input-group has-validation">
-            <input type="email" class="form-control{% if loginForm.email.errors %} is-invalid{% endif %}" id="email" name="email" placeholder="e.g. alex@email.com" value="{{ loginForm.data.email }}" required>
+        <label for="email" class="form-label text-xs{% if loginForm.email.errors %} text-danger{% endif %}">Email address</label>
+        <div class="input-group has-validation with-prepend-img">
+            <span class="input-prepend-img"><img src="{% static 'images/icon-email.svg' %}" alt="email"></span>
+            <input type="email" class="form-control{% if loginForm.email.errors %} border-danger{% endif %}" id="email" name="email" placeholder="e.g. alex@email.com" value="{{ loginForm.data.email }}">
 
             {% if loginForm.email.errors %}
-                <div class="invalid-feedback">{{ loginForm.email.errors.0 }}</div>
+                <div class="error-msg">{{ loginForm.email.errors.0 }}</div>
             {% endif %}
         </div>
     </div>
     <div class="mb-4">
-        <label for="password" class="form-label">Password</label>
+        <label for="password" class="form-label text-xs{% if loginForm.password.errors %} text-danger{% endif %}">Password</label>
 
-        <div class="input-group has-validation">
-            <input type="password" class="form-control{% if loginForm.password.errors %} is-invalid{% endif %}" id="password" name="password" placeholder="Enter your password" required>
+        <div class="input-group has-validation with-prepend-img">
+            <span class="input-prepend-img"><img src="{% static 'images/icon-password.svg' %}" alt="email"></span>
+            <input type="password" class="form-control{% if loginForm.password.errors %} border-danger{% endif %}" id="password" name="password" placeholder="Enter your password">
 
             {% if loginForm.password.errors %}
-            <div class="invalid-feedback">{{ loginForm.password.errors.0 }}</div>
+                <div class="error-msg">{{ loginForm.password.errors.0 }}</div>
             {% endif %}
         </div>
     </div>

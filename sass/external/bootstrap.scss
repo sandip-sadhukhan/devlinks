@@ -1,0 +1,20 @@
+// Colors
+$primary: #633cff;
+$secondary: #737373;
+$info: #beadff;
+$danger: #ff3939;
+$light: #fafafa;
+$dark: #333333;
+
+// Button
+$btn-padding-y: 11px;
+
+// Input
+$input-padding-y: 12px;
+$input-placeholder-color: rgba(51, 51, 51, 0.5);
+$focus-ring-blur: 20px !default;
+
+// Fonts
+$font-family-sans-serif: "instrumentSans", sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

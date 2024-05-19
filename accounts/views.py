@@ -18,7 +18,13 @@ def login(request):
                 response["HX-Redirect"] = reverse("dashboard")
                 return response
             else:
-                form.add_error("password", "Invalid email or password")
+                user_exists = User.objects.filter(email=form.cleaned_data["email"]).exists()
+
+                if user_exists:
+                    form.add_error("password", "Please check again")
+                else:
+                    form.add_error("email", "User does not exist")
+
         return render(request, "forms/login-form.html", {"loginForm": form})
 
     return render(request, "login.html")

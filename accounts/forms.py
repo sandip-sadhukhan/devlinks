@@ -1,11 +1,11 @@
 from django import forms
 
 class LoginForm(forms.Form):
-    email = forms.EmailField()
-    password = forms.CharField()
+    email = forms.EmailField(error_messages={"required": "Can't be empty"})
+    password = forms.CharField(error_messages={"required": "Can't be empty"})
 
 class SignupForm(forms.Form):
-    email = forms.EmailField()
+    email = forms.EmailField(error_messages={"required": "Can't be empty"})
     password1 = forms.CharField()
     password2 = forms.CharField()
 

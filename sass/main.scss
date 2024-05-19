@@ -1,0 +1,61 @@
+// Font import
+@font-face {
+  font-family: instrumentSans;
+  src: url(../fonts/InstrumentSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: instrumentSans;
+  src: url(../fonts/InstrumentSans-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: instrumentSans;
+  src: url(../fonts/InstrumentSans-SemiBold.ttf);
+  font-weight: 500;
+}
+
+// Basic Utils
+.text-xs {
+  font-size: 12px;
+}
+
+/* Login */
+.login-section {
+  min-height: 100vh;
+}
+
+.login-body {
+  margin-top: 120px;
+}
+
+// Input
+.with-prepend-img {
+  position: relative;
+
+  .input-prepend-img {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-56%);
+    z-index: 10;
+  }
+
+  input.form-control {
+    padding-left: 50px;
+    border-radius: var(--bs-border-radius) !important;
+  }
+
+  .error-msg {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-56%);
+    z-index: 10;
+    text-align: right;
+    width: max-content;
+    color: var(--bs-danger);
+    font-size: 12px;
+  }
+}
